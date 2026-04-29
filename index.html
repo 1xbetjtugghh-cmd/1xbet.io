@@ -8,69 +8,74 @@
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
 /* الصندوق */
 .box {
     background: #1e2a38;
-    padding: 25px;
-    border-radius: 15px;
     width: 100%;
-    max-width: 400px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    text-align: center;
+    min-height: 100vh;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* اللوجو */
 .logo {
-    width: 120px;
-    margin-bottom: 10px;
+    width: 140px;
+    margin: 0 auto 15px;
+    display: block;
 }
 
 /* العنوان */
 h1 {
     color: #00c3ff;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 22px;
 }
 
 /* الحقول */
 input {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     margin: 10px 0;
-    border-radius: 8px;
+    border-radius: 10px;
     border: none;
     outline: none;
     background: #2f3e50;
     color: white;
-    font-size: 14px;
+    font-size: 15px;
     transition: 0.3s;
 }
 
 input:focus {
     background: #3b4f65;
-    box-shadow: 0 0 6px #00c3ff;
+    box-shadow: 0 0 8px #00c3ff;
 }
 
 /* الزر */
 button {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
     background: linear-gradient(90deg, #00c3ff, #0072ff);
     color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
-    opacity: 0.85;
+    opacity: 0.9;
 }
 </style>
 </head>
